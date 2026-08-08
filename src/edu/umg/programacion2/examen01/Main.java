@@ -79,7 +79,7 @@ public class Main {
 
 	private static void contarPorCategoria(Biblioteca biblioteca) {
 		try {
-			System.out.println(biblioteca.contarLibrosPorCategoria());
+			System.out.println(biblioteca.contarLibrosPorCategoria(biblioteca.listarTodos()));
 		} catch (UnsupportedOperationException ex) {
 			System.out.println("Pendiente: " + ex.getMessage());
 		}
