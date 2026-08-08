@@ -174,9 +174,27 @@ public class Biblioteca {
 	 *   excepción.
 	 */
 	public Libro libroMasAntiguoDeCategoria(String categoria) {
-		// TODO: reemplazar esta línea por la lógica descrita arriba.
-		throw new UnsupportedOperationException("TODO: completar libroMasAntiguoDeCategoria() en Biblioteca");
-	}
+		
+		 
+		    Libro masAntiguo = null;
+
+		    
+		    for (Libro libro : this.libros) {
+		        
+		      
+		        if (libro.getCategoria() != null && libro.getCategoria().equals(categoria)) {
+		            
+		           
+		            if (masAntiguo == null || libro.getAnioPublicacion() < masAntiguo.getAnioPublicacion()) {
+		                masAntiguo = libro; 
+		            }
+		        }
+		    }
+
+		    
+		    return masAntiguo;
+		}
+	
 
 	/**
 	 * RETO OPCIONAL (10 pts extra): completar prestarPrimerDisponibleDeCategoria().
